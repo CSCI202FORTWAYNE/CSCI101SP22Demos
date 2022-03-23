@@ -15,9 +15,9 @@ int main()
 	while(play != 'N')
 	{
 		secretNum = (rand() % 50) + 1;
-		bool isGuessed = false;
-		int count = 0;
-		while(!isGuessed && count < 5)
+		
+		
+		for(int count = 0; count < 5; count++)
 		{
 			cout << "Guess the random number (1 - 50): " << endl;
 			cin >> guess;
@@ -50,9 +50,9 @@ int main()
 			else if(guess == secretNum)
 			{
 				cout << "You guessed the number!" << endl;
-				isGuessed = true;
+				break;
 			}
-			count++;
+			
 		}
 		cout << "The secret num was " << secretNum << endl;
 		cout << "Would you like to play again (Enter N to quit): " << endl;

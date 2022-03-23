@@ -20,10 +20,16 @@ int main()
 		average = 0;
 		while (newLine != '\n' && !fin.eof())
 		{
+			newLine = fin.peek();
+			if(newLine == '\n')
+			{
+				continue;
+			}
 			fin >> grade;
 			average += grade; //average = average + grade;
 			newLine = fin.get();
 			counter++; //counter = counter + 1;
+			//cout << fname << " " << grade << " " << counter << endl;
 		}
 		average /= counter; // average = average / 5;
 	
